@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Domain.Data.TBA_Evaluaciones>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idCurso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idEvaluacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idSemestre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idTipoEvaluacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prefijo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Orden)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrdenActa)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.idCurso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idEvaluacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idSemestre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idTipoEvaluacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prefijo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Orden)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrdenActa)
+            </td>
+        </tr>
+    }
+</table>
